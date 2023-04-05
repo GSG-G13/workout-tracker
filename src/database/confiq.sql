@@ -22,7 +22,7 @@ CREATE TABLE workouts(
 
 );
 
-INSERT INTO  workouts (exercise,  workout_date,reps,duration ) VALUES
+INSERT INTO  workouts (exercise,  workout_date,reps,duration) VALUES
     ('jumping', '2023-3-3','4','30'),
     ('squate', '2023-3-3','4','30');
 

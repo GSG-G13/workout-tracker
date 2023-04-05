@@ -8,17 +8,50 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="login-page">
 
-        <div class="form">
-        
-          <form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button><a href="./workout.html">LOGIN</a> </button>
-            <p class="message">Not registered?<a href="#">Create an account</a></p>
-          </form>
+      
+  
+    <!-- LOGIN FORM CREATION -->
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx bxl-xing'></i>GYM</h2>
+            <div class="text-item">
+                <h2>BUILD<br><span>
+                   YOUR BODY
+                </span></h2>
+                <p>Fitness isnt always about progress.its about consistency.</p>
+
+            </div>
         </div>
-      </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="/login" method="post">
+                    <h2>Log In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="text" name="name" required>
+                        <label >Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password"  name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                        <a href="#">Forget Password</a>
+                    </div>
+                    <button class="btn">Login In</button>
+                    <div class="create-account">
+                        <p>Create A New Account? <a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+    </div>
+   
+     
 </body>
 </html>
