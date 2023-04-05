@@ -4,55 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/workout.css">
     <title>WORKOUTS</title>
 </head>
 <body>
-    <form action="/add_workout" method="post">
-        <input type="date" name="workout_date">
-        <input type="text" name="exercise">
-        <input type="number" name="reps">
-        <input type="text" name="duration">
-        <button type="submit">add</button>
+  
+    <!-- LOGIN FORM CREATION -->
 
-    </form>
+    <div class="containerr">
+      <h1>Track your progress</h1>
+      <div class="form-box"> 
+        <form action="/add_workout" method="post">
+          <div class="row"> <div class="input-box">
+            <input type="text" name="exercise" required>
+            <label >Excersice</label>
+        </div>
+        <div class="input-box">
+          <input type="date" name="workout_date" required>
+        </div></div>
+        <div class="row"> <div class="input-box">
+          <input type="number" name="reps" required>
+            <label>Reps</label>
+        </div>
+        <div class="input-box">
+          <input type="text" name="duration" required>
+            <label>Duration</label>
+        </div></div>
+     
+       
+        
+      
+        <button type="submit" id="btn">add</button>
+
+    </form></div>
+     
+   
     <table>
-        <caption>Statement Summary</caption>
+      
         <thead>
           <tr>
-            <th scope="col">Account</th>
-            <th scope="col">Due Date</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Period</th>
+            <th scope="col">Date</th>
+            <th scope="col">Exercise</th>
+            <th scope="col">Reps</th>
+            <th scope="col">Duration</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="parent">
           <tr>
-            <td data-label="Account">Visa - 3412</td>
-            <td data-label="Due Date">04/01/2016</td>
-            <td data-label="Amount">$1,190</td>
-            <td data-label="Period">03/01/2016 - 03/31/2016</td>
+            <td data-label="Date">Visa - 3412</td>
+            <td data-label="Excersice">04/01/2016</td>
+            <td data-label="Reps">$1,190</td>
+            <td data-label="Duration">03/01/2016 - 03/31/2016</td>
           </tr>
-          <tr>
-            <td scope="row" data-label="Account">Visa - 6076</td>
-            <td data-label="Due Date">03/01/2016</td>
-            <td data-label="Amount">$2,443</td>
-            <td data-label="Period">02/01/2016 - 02/29/2016</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Account">Corporate AMEX</td>
-            <td data-label="Due Date">03/01/2016</td>
-            <td data-label="Amount">$1,181</td>
-            <td data-label="Period">02/01/2016 - 02/29/2016</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Acount">Visa - 3412</td>
-            <td data-label="Due Date">02/01/2016</td>
-            <td data-label="Amount">$842</td>
-            <td data-label="Period">01/01/2016 - 01/31/2016</td>
-          </tr>
+          
         </tbody>
       </table>
+        </div>
+        <script src="./js/dom.js"></script>
+      <script src="app.js"></script>
+    
 </body>
 </html>
 
