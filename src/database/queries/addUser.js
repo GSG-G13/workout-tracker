@@ -1,5 +1,4 @@
 const connection = require('../config/connection');
-
 const addUser = (data) => {
     let { name, password } = data;
     const sql = {
