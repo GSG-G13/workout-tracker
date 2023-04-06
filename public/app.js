@@ -1,6 +1,8 @@
 
-fetch('/workout').then(res => res.json()).then(data => {
-    creatRow(data);
+fetch('/workout/2').then(res => res.json()).then(data => {
+   data.data.workouts.forEach(element => {
+    creatRow(element);
+   }); 
 })
 
 

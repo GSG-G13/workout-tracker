@@ -26,25 +26,25 @@
         </div>
         <div class="login-section">
             <div class="form-box login">
-                <form action="/login" method="post">
+                <form class="login_form" method="post" action="/login">
                     <h2>Log In</h2>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" class="name" required>
                         <label >Username</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
-                        <input type="password"  name="password" required>
+                        <input type="password"  name="password" class="password" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-password">
                         <label for=""><input type="checkbox">Remember Me</label>
                         <a href="#">Forget Password</a>
                     </div>
-                    <button class="btn">Login In</button>
+                    <button class="login_btn">Login In</button>
                     <div class="create-account">
-                        <p>Create A New Account? <a href="#" class="register-link">Sign Up</a></p>
+                        <p>Create A New Account? <a href="/workouts" class="register-link">Sign Up</a></p>
                     </div>
                 </form>
             </div>

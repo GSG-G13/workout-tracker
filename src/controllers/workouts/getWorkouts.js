@@ -1,8 +1,22 @@
 const express=require('express')
-const {getDataQuery} = require("../../database/queries");
+const {getDataQuery} = require("../../database");
+const store = require('store')
 
 const getData = (req,res)=>{
- getDataQuery().then(data=>res.json(data.rows)).then(err => console.log("err:", err))
+
+  const id = req.params.id;
+  store.set('id',{ id :id  })
+  console.log(req.params.id)
+ getDataQuery(id)
+ .then((data) => {
+  res.json({
+    error: false,
+    data: {
+      workouts: data.rows,
+      message: "Workouts Retrieved Successfully!",
+    },
+  });
+})
 }
 
 module.exports = getData;

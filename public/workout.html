@@ -18,18 +18,18 @@
       <div class="form-box"> 
         <form action="/add_workout" method="post">
           <div class="row"> <div class="input-box">
-            <input type="text" name="exercise" required>
+            <input type="text" name="exercise"id="exe" required>
             <label >Excersice</label>
         </div>
         <div class="input-box">
-          <input type="date" name="workout_date" required>
+          <input type="date" name="workout_date" id="dat" required>
         </div></div>
         <div class="row"> <div class="input-box">
-          <input type="number" name="reps" required>
+          <input type="number" name="reps" id="rep" required>
             <label>Reps</label>
         </div>
         <div class="input-box">
-          <input type="text" name="duration" required>
+          <input type="text" name="duration"  id="dur" required>
             <label>Duration</label>
         </div></div>
      
@@ -38,7 +38,8 @@
       
         <button type="submit" id="btn">add</button>
 
-    </form></div>
+    </form>
+  </div>
      
    
     <table>
@@ -52,12 +53,7 @@
           </tr>
         </thead>
         <tbody class="parent">
-          <tr>
-            <td data-label="Date">Visa - 3412</td>
-            <td data-label="Excersice">04/01/2016</td>
-            <td data-label="Reps">$1,190</td>
-            <td data-label="Duration">03/01/2016 - 03/31/2016</td>
-          </tr>
+         
           
         </tbody>
       </table>
