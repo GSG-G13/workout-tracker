@@ -1,5 +1,5 @@
 const express = require('express')
-const { postDataQuery } = require("../../database/queries");
+const { postDataQuery } = require("../../database");
 
 const postData = (req, res) => {
   const workout_data = req.body;
@@ -10,4 +10,6 @@ const postData = (req, res) => {
     )
     .catch((err) => console.log("err:", err));
 };
+
+
 module.exports = postData;

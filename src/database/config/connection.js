@@ -1,5 +1,4 @@
 require('env2')('.env');
-const { log } = require('console');
 const { Pool } = require('pg');
 
 const { DB_URL } = process.env;

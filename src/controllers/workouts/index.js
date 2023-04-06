@@ -1,3 +1,4 @@
+const express = require("express");
 const getData = require('./getWorkouts');
 const postData = require('./postWorkout');
 const path = require('path');
