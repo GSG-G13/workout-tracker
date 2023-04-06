@@ -4,7 +4,7 @@ const addUser =require('./controllers/users/addUser')
 
 
 const router = express.Router();
-router.get('/workout', getData);
+router.get('/workout/:id', getData);
 router.post('/add_workout', postData);
 router.post('/login', addUser);
 router.get('/workouts', workout_page);

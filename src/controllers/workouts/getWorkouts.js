@@ -1,8 +1,13 @@
 const express=require('express')
 const {getDataQuery} = require("../../database");
+const store = require('store')
 
 const getData = (req,res)=>{
- getDataQuery()
+
+  const id = req.params.id;
+  store.set('id',{ id :id  })
+  console.log(req.params.id)
+ getDataQuery(id)
  .then((data) => {
   res.json({
     error: false,
@@ -12,16 +17,6 @@ const getData = (req,res)=>{
     },
   });
 })
-//  .catch(err => console.log("err:", err))
-// getDataQuery()
-// .then((data) => {
-//   res.render('index', { workouts: data.rows });
-// })
-// .catch((err) => {
-//   console.log(err);
-//   res.status(500).send('Internal server error');
-// });
-
 }
 
 module.exports = getData;
